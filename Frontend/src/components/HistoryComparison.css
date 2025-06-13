@@ -1,0 +1,133 @@
+.hcp-container {
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+  border-radius:16px;
+  background:var(--bg);
+  box-shadow:0 2px 20px rgba(0,0,0,0.1);
+  transition:0.3s;
+  font-family:'Segoe UI',sans-serif;
+}
+
+:root {
+  --bg:#ffffff;
+  --fg:#222;
+  --card:#f1f4f8;
+  --btn-bg:#ddd;
+  --btn-active:#4b9cd3;
+  --hrt:#333;
+  --hover:#bbb;
+}
+
+.dark {
+  --bg:#1f1f1f;
+  --fg:#eee;
+  --card:#2a2a2a;
+  --btn-bg:#333;
+  --btn-active:#4b9cd3;
+  --hrt:#eee;
+  --hover:#555;
+}
+
+.hcp-container * { color:var(--fg); }
+
+.hcp-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.hcp-dark-toggle {
+  padding:8px 12px;
+  background:var(--btn-bg);
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.hcp-controls {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:30px;
+}
+
+.hcp-btn-group .hcp-btn {
+  border:none;
+  padding:10px 16px;
+  background:var(--btn-bg);
+  border-radius:8px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.hcp-btn-group .hcp-btn.active {
+  background:var(--btn-active);
+  color:#fff;
+}
+
+.hcp-btn:hover { background:var(--hover); }
+
+.hcp-chart-toggle {
+  margin-left:auto;
+}
+
+.hcp-date-row {
+  display:flex;
+  gap:20px;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+
+.hcp-date label { display:block; margin-bottom:6px; font-weight:600; }
+
+.hcp-date input,
+.hcp-date select {
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid var(--btn-bg);
+  background:var(--card);
+  color:var(--hrt);
+}
+
+.hcp-summary {
+  background:var(--card);
+  padding:16px;
+  border-radius:8px;
+  margin-bottom:20px;
+  box-shadow:0 1px 10px rgba(0,0,0,0.05);
+  font-size:14px;
+}
+
+.hcp-chart-area {
+  background:var(--card);
+  padding:20px;
+  border-radius:12px;
+  position:relative;
+  box-shadow:0 2px 15px rgba(0,0,0,0.1);
+}
+
+.hcp-exports {
+  position:absolute;
+  top:16px;
+  right:16px;
+  display:flex;
+  gap:10px;
+}
+
+.hcp-exports button {
+  padding:6px 10px;
+  border:none;
+  border-radius:6px;
+  background:var(--btn-bg);
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.hcp-exports button:hover { background:var(--hover); }
+
+@media(max-width:768px){
+  .hcp-date-row, .hcp-controls { flex-direction:column; }
+  .hcp-exports { position:static; margin-top:10px; }
+}

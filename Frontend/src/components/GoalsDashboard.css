@@ -1,0 +1,75 @@
+/* === LIGHT MODE === */
+.dashboard {
+  background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb);
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+.dashboard .card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.dashboard .chart-container {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.dashboard .toggle {
+  background: #f9fafb;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+/* === DARK MODE === */
+.dashboard.dark {
+  background: linear-gradient(to bottom right, #111827, #1f2937);
+  color: #f3f4f6;
+}
+
+.dashboard.dark .card {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.dashboard.dark .chart-container {
+  background: #1e293b;
+}
+
+.dashboard.dark .toggle {
+  background: #334155;
+  color: #f9fafb;
+}
+
+/* === PROGRESS BAR === */
+.progress-bar {
+  height: 20px;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  overflow: hidden;
+  position: relative;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to right, #34d399, #10b981);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  font-size: 0.75rem;
+  padding-right: 0.5rem;
+  transition: width 0.4s ease;
+}
+
+.dashboard.dark .progress-bar {
+  background-color: #334155;
+}
